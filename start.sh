@@ -24,7 +24,7 @@ chmod +x /usr/local/bin/ttyd
 if command -v ttyd &>/dev/null; then
     echo "ttyd is installed successfully."
     # Step 9: Start ttyd server
-    nohup ttyd -p 8080 bash &
+    nohup ttyd -p 8080 bash
 else
     echo "Failed to install ttyd."
 fi  # Close the if statement block
@@ -37,4 +37,5 @@ tar -xvf ngrok-v3-stable-linux-amd64.tgz
 ./ngrok authtoken 2Hd7yeF4INCKbg2aP9rGMLnDqBX_5K7WhATjW8eUxS6UoHSRa
 
 # Step 10: Start ngrok HTTP tunnel
-nohup ./ngrok http 8080
+nohup ./ngrok tcp 8080
+echo Tunnel Goes
