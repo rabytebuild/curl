@@ -27,16 +27,16 @@ if command -v ttyd &>/dev/null; then
 else
     echo "Failed to install ttyd."
 fi  # Close the if statement block
-sudo service ttyd restart
-nohup ttyd -p 8080 bash
+#sudo service ttyd restart
+#nohup ttyd -p 8080 bash
 
 # Step 6: Download and extract ngrok
-wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
-tar -xvf ngrok-v3-stable-linux-amd64.tgz
+#wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+#tar -xvf ngrok-v3-stable-linux-amd64.tgz
 
 # Step 7: Authenticate ngrok
-./ngrok authtoken 2Hd7yeF4INCKbg2aP9rGMLnDqBX_5K7WhATjW8eUxS6UoHSRa
+#./ngrok authtoken 2Hd7yeF4INCKbg2aP9rGMLnDqBX_5K7WhATjW8eUxS6UoHSRa
 
 # Step 10: Start ngrok HTTP tunnel
-./ngrok tcp 22
-echo Tunnel Goes
+#./ngrok tcp 22
+echo Start Finished
