@@ -11,7 +11,7 @@ sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
 
 # Restart SSH service
-service ssh restart
+sudo service ssh restart
 
 # Download the latest release of ttyd
 TTYD_VERSION=$(wget -qO- https://api.github.com/repos/tsl0922/ttyd/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')
@@ -24,10 +24,11 @@ chmod +x /usr/local/bin/ttyd
 if command -v ttyd &>/dev/null; then
     echo "ttyd is installed successfully."
     # Step 9: Start ttyd server
-    nohup ttyd -p 8080 bash
 else
     echo "Failed to install ttyd."
 fi  # Close the if statement block
+sudo service ttyd restart
+nohup ttyd -p 8080 bash
 
 # Step 6: Download and extract ngrok
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
@@ -37,5 +38,5 @@ tar -xvf ngrok-v3-stable-linux-amd64.tgz
 ./ngrok authtoken 2Hd7yeF4INCKbg2aP9rGMLnDqBX_5K7WhATjW8eUxS6UoHSRa
 
 # Step 10: Start ngrok HTTP tunnel
-nohup ./ngrok tcp 8080
+./ngrok tcp 22
 echo Tunnel Goes
