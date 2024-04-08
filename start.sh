@@ -27,6 +27,7 @@ if command -v ttyd &>/dev/null; then
     nohup ttyd -p 8080 bash &
 else
     echo "Failed to install ttyd."
+fi  # Close the if statement block
 
 # Step 6: Download and extract ngrok
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
