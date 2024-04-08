@@ -1,12 +1,6 @@
 #!/bin/bash
 
-# Step 3: Add user 'root' to sudo group
-adduser root sudo
-
-# Step 4: Install curl
-sudo apt install curl -y
-
-# Step 5: Install essential utilities
+# Step 1: Install essential utilities
 sudo apt install wget nano vim zip tar -y
 
 # Install openssh-server package
