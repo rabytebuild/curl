@@ -13,11 +13,11 @@ sudo apt install -y vim  # text editor
 sudo apt install -y nano  # text editor
 sudo apt install -y htop  # interactive process viewer
 sudo apt install -y net-tools  # networking utilities
-sudo apt install -y openssh-server  # secure shell (SSH) server
-sudo apt install -y python3  # Python 3 programming language interpreter
-sudo apt install -y python3-pip  # Python package installer
-sudo apt install -y virtualenv  # tool to create isolated Python environments
-sudo apt install -y default-jre  # default Java Runtime Environment
+# sudo apt install -y openssh-server  # secure shell (SSH) server
+# sudo apt install -y python3  # Python 3 programming language interpreter
+# sudo apt install -y python3-pip  # Python package installer
+# sudo apt install -y virtualenv  # tool to create isolated Python environments
+# sudo apt install -y default-jre  # default Java Runtime Environment
 
 # Upgrade
 sudo apt upgrade -y
