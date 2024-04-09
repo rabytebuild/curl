@@ -19,7 +19,7 @@ sudo sed -i 's/#AllowAgentForwarding yes/AllowAgentForwarding yes/' /etc/ssh/ssh
 sudo sed -i 's/#PermitTunnel yes/PermitTunnel yes/' /etc/ssh/sshd_config
 
 # Restart SSH service to apply changes
-sudo systemctl restart ssh
+sudo service ssh restart
 
 # Optionally, display a message indicating that SSH server setup is complete
 echo "SSH server has been installed and configured."
